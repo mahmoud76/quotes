@@ -12,8 +12,9 @@ from scrapy.loader.processors import MapCompose, Join, TakeFirst
 
 
 def text_process(text):
-    word_list = text.replace(u'“', '').replace(u'”', '').split()
-    return random.sample(word_list, 2)
+    word_list = text.replace(u'“', '').replace(u'”', '')#.split()
+    return word_list
+    #return random.sample(word_list, 2)
 
 
 class QuotesItem(scrapy.Item):
@@ -25,4 +26,4 @@ class QuotesLoader(ItemLoader):
     default_item_class = QuotesItem
     default_output_processor = TakeFirst()
     text_in = MapCompose(text_process)
-    text_out = Join(separator=u'-')
+    # text_out = Join(separator=u'-')

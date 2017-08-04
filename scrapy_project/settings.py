@@ -65,7 +65,7 @@ ROBOTSTXT_OBEY = True
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
     # 'scrapy_project.pipelines.ScrapyProjectPipeline': 300,  # 默认生成
-    'scrapy_project.pipelines.FilterPipeline': 100,
+    # 'scrapy_project.pipelines.FilterPipeline': 100,
     'scrapy_project.pipelines.JsonWriterPipeline': 200,
 }
 
